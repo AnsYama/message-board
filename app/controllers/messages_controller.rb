@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   before_action :set_massage, only: [:show, :edit, :update, :destroy]
   
   def index
-    @messages = Message.order(id: :desc).page(params[:page]).per(7)
+    @messages = Message.order(id: :desc).page(params[:page]).per(50)
   end
 
   def show
